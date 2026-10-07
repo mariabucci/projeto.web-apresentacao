@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b0b0f;
+    color: #f5f5f5;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    width: 100%;
+    height: 80px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(11, 11, 15, 0.96);
+    border-bottom: 1px solid #27272f;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #a875ff;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a875ff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+    padding: 100px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(168, 117, 255, 0.18),
+            transparent 35%
+        );
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.tag {
+    color: #a875ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 6vw, 82px);
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #a875ff;
+}
+
+.hero-text > p:not(.tag) {
+    color: #999;
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #a875ff;
+    color: white;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #8f55e8;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px rgba(168, 117, 255, 0.3);
+}
+
+
+/* =========================
+   CARD DO HERO
+========================= */
+
+.hero-card {
+    width: 330px;
+    padding: 35px;
+
+    background: #15151c;
+
+    border: 1px solid #2a2a34;
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.45);
+
+    transition: 0.3s;
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+    border-color: #a875ff;
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.hero-card > p {
+    color: #777;
+    font-size: 14px;
+}
+
+.mini-line {
+    height: 1px;
+    background: #2b2b33;
+    margin: 25px 0;
+}
+
+.mini-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    color: #888;
+    font-size: 14px;
+}
+
+.mini-info strong {
+    color: white;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+    padding: 100px 8%;
+    background: #101015;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.section-title > p:last-child {
+    color: #777;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* =========================
+   CARD DO PRODUTO
+========================= */
+
+.produto {
+    background: #17171e;
+
+    border: 1px solid #292932;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-7px);
+
+    border-color: #a875ff;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.produto-img {
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    background:
+        radial-gradient(
+            circle,
+            #28202f,
+            #15151b
+        );
+}
+
+.produto-info {
+    padding: 25px;
+}
+
+.produto-info > span {
+    color: #a875ff;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.produto-info h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.produto-info p {
+    color: #777;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    min-height: 42px;
+}
+
+.produto-bottom {
+    margin-top: 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.produto-bottom strong {
+    font-size: 17px;
+}
+
+
+/* =========================
+   BOTÃO ADICIONAR
+========================= */
+
+.adicionar {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    background: #a875ff;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.adicionar:hover {
+    background: #8f55e8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(168, 117, 255, 0.25);
+}
+
+
+/* =========================
+   CARRINHO
+========================= */
+
+.carrinho {
+    padding: 100px 8%;
+}
+
+.carrinho-box {
+    display: grid;
+
+    grid-template-columns: 1.5fr 0.8fr;
+
+    gap: 25px;
+}
+
+.lista-area,
+.resumo {
+    background: #15151b;
+
+    border: 1px solid #292932;
+
+    border-radius: 15px;
+}
+
+.lista-area {
+    padding: 30px;
+}
+
+.lista-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #292932;
+}
+
+.lista-header h3 {
+    font-size: 18px;
+}
+
+#contador {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* =========================
+   CARRINHO VAZIO
+========================= */
+
+.vazio {
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    color: #777;
+}
+
+.vazio div {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.vazio p {
+    color: #ddd;
+    margin-bottom: 7px;
+}
+
+.vazio span {
+    font-size: 13px;
+}
+
+
+/* =========================
+   ITEM DO CARRINHO
+========================= */
+
+.item-carrinho {
+    padding: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #292932;
+}
+
+.item-nome {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.item-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #24202d;
+
+    border-radius: 8px;
+
+    font-size: 22px;
+}
+
+.item-nome h4 {
+    margin-bottom: 4px;
+}
+
+.item-nome span {
+    color: #777;
+    font-size: 12px;
+}
+
+.item-preco {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.remover {
+    background: transparent;
+    border: none;
+
+    color: #ff6b6b;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.remover:hover {
+    color: #ff3d3d;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESUMO
+========================= */
+
+.resumo {
+    padding: 30px;
+    height: fit-content;
+}
+
+.resumo h3 {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+    color: #888;
+    font-size: 14px;
+}
+
+.resumo-linha strong {
+    color: white;
+}
+
+.linha {
+    height: 1px;
+
+    background: #292932;
+
+    margin: 25px 0;
+}
+
+.unique-title {
+    font-size: 12px;
+
+    color: #a875ff;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+#produtosUnicos {
+    color: #888;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BOTÕES DO RESUMO
+========================= */
+
+#finalizar,
+#limpar {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+#finalizar {
+    border: none;
+
+    background: #a875ff;
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+#finalizar:hover {
+    background: #8f55e8;
+
+    transform: translateY(-2px);
+}
+
+.limpar {
+    background: transparent;
+
+    color: #aaa;
+
+    border: 1px solid #36363f;
+}
+
+.limpar:hover {
+    color: white;
+    border-color: #777;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    padding: 35px 8%;
+
+    border-top: 1px solid #292932;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carrinho-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero,
+    .produtos,
+    .carrinho {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .item-carrinho {
+        gap: 15px;
+    }
+
+    .item-preco {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+.desafio {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.desafio h2 {
+    margin-bottom: 20px;
+}
+
+.lista-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#item {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#lista p {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 10px;
+    font-weight: 500;
+}

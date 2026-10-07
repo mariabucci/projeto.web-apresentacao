@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Market - Carrinho de Compras</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">GLOW<span>MARKET</span></div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#carrinho">Carrinho</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-text">
+                <p class="tag">CARRINHO INTELIGENTE</p>
+
+                <h1>
+                    Suas compras,
+                    <span>mais simples.</span>
+                </h1>
+
+                <p>
+                    Adicione produtos ao seu carrinho, remova itens,
+                    visualize produtos únicos e acompanhe o valor total
+                    da sua compra.
+                </p>
+
+                <a href="#produtos" class="btn">
+                    Explorar produtos
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <div class="card-icon">🛒</div>
+                <h3>Seu carrinho</h3>
+                <p>Pronto para receber suas escolhas.</p>
+
+                <div class="mini-line"></div>
+
+                <div class="mini-info">
+                    <span>Itens</span>
+                    <strong id="quantidadeHero">0</strong>
+                </div>
+
+                <div class="mini-info">
+                    <span>Total</span>
+                    <strong id="totalHero">R$ 0,00</strong>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="produtos" id="produtos">
+
+            <div class="section-title">
+                <p class="tag">PRODUTOS</p>
+                <h2>Escolha seus favoritos</h2>
+                <p>Adicione produtos ao carrinho para começar.</p>
+            </div>
+
+            <div class="produtos-grid">
+
+                <article class="produto">
+                    <div class="produto-img">🎧</div>
+
+                    <div class="produto-info">
+                        <span>TECNOLOGIA</span>
+                        <h3>Fone Bluetooth</h3>
+                        <p>Som de alta qualidade e conexão sem fio.</p>
+
+                        <div class="produto-bottom">
+                            <strong>R$ 89,90</strong>
+
+                            <button
+                                class="adicionar"
+                                data-nome="Fone Bluetooth"
+                                data-preco="89.90">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="produto">
+                    <div class="produto-img">⌨️</div>
+
+                    <div class="produto-info">
+                        <span>TECNOLOGIA</span>
+                        <h3>Teclado Mecânico</h3>
+                        <p>Teclas rápidas para produtividade e jogos.</p>
+
+                        <div class="produto-bottom">
+                            <strong>R$ 149,90</strong>
+
+                            <button
+                                class="adicionar"
+                                data-nome="Teclado Mecânico"
+                                data-preco="149.90">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="produto">
+                    <div class="produto-img">🖱️</div>
+
+                    <div class="produto-info">
+                        <span>TECNOLOGIA</span>
+                        <h3>Mouse Gamer</h3>
+                        <p>Precisão e conforto para longas sessões.</p>
+
+                        <div class="produto-bottom">
+                            <strong>R$ 79,90</strong>
+
+                            <button
+                                class="adicionar"
+                                data-nome="Mouse Gamer"
+                                data-preco="79.90">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="produto">
+                    <div class="produto-img">💡</div>
+
+                    <div class="produto-info">
+                        <span>CASA</span>
+                        <h3>Luminária LED</h3>
+                        <p>Iluminação moderna para seu ambiente.</p>
+
+                        <div class="produto-bottom">
+                            <strong>R$ 59,90</strong>
+
+                            <button
+                                class="adicionar"
+                                data-nome="Luminária LED"
+                                data-preco="59.90">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="produto">
+                    <div class="produto-img">🔌</div>
+
+                    <div class="produto-info">
+                        <span>ACESSÓRIOS</span>
+                        <h3>Carregador USB-C</h3>
+                        <p>Carregamento rápido para seus dispositivos.</p>
+
+                        <div class="produto-bottom">
+                            <strong>R$ 39,90</strong>
+
+                            <button
+                                class="adicionar"
+                                data-nome="Carregador USB-C"
+                                data-preco="39.90">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="produto">
+                    <div class="produto-img">📱</div>
+
+                    <div class="produto-info">
+                        <span>TECNOLOGIA</span>
+                        <h3>Suporte para Celular</h3>
+                        <p>Praticidade para deixar seu celular organizado.</p>
+
+                        <div class="produto-bottom">
+                            <strong>R$ 29,90</strong>
+
+                            <button
+                                class="adicionar"
+                                data-nome="Suporte para Celular"
+                                data-preco="29.90">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="carrinho" id="carrinho">
+
+            <div class="section-title">
+                <p class="tag">SEU CARRINHO</p>
+                <h2>Resumo da compra</h2>
+            </div>
+
+            <div class="carrinho-box">
+
+                <div class="lista-area">
+
+                    <div class="lista-header">
+                        <h3>Produtos adicionados</h3>
+
+                        <span id="contador">
+                            0 itens
+                        </span>
+                    </div>
+
+                    <div id="listaCarrinho">
+                        <div class="vazio">
+                            <div>🛒</div>
+                            <p>Seu carrinho está vazio.</p>
+                            <span>
+                                Adicione um produto para começar.
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <aside class="resumo">
+
+                    <h3>Resumo</h3>
+
+                    <div class="resumo-linha">
+                        <span>Quantidade</span>
+                        <strong id="quantidade">0</strong>
+                    </div>
+
+                    <div class="resumo-linha">
+                        <span>Total</span>
+                        <strong id="total">R$ 0,00</strong>
+                    </div>
+
+                    <div class="linha"></div>
+
+                    <p class="unique-title">
+                        Produtos únicos
+                    </p>
+
+                    <p id="produtosUnicos">
+                        Nenhum produto adicionado.
+                    </p>
+
+                    <button id="finalizar">
+                        Finalizar compra
+                    </button>
+
+                    <button id="limpar" class="limpar">
+                        Limpar carrinho
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <section class="desafio">
+    <h2>Minha Lista de Itens</h2>
+
+    <div class="lista-form">
+        <input id="item" type="text" placeholder="Digite um item">
+        <button id="adicionar">Adicionar</button>
+    </div>
+
+    <div id="lista"></div>
+</section>
+
+
+    <footer>
+        <p>© 2026 GlowMarket</p>
+        <p>Projeto para compras online</p>
+         <p>CSS desenvolvido com auxílio de Inteligência Artificial.</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
